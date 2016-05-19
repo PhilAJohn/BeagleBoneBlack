@@ -1,0 +1,8 @@
+sudo apt-get install eclipse eclipse-cdt g++ gcc
+
+# Not required. Using hf version below 
+# sudo apt-get install gcc-arm-linux-gnueabi
+# sudo apt-get install g++-arm-linux-gnueabi
+
+sudo apt-get install gcc-arm-linux-gnueabihf
+sudo apt-get install g++-arm-linux-gnueabihf
