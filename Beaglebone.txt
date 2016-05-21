@@ -6,3 +6,24 @@ sudo apt-get install eclipse eclipse-cdt g++ gcc
 
 sudo apt-get install gcc-arm-linux-gnueabihf
 sudo apt-get install g++-arm-linux-gnueabihf
+
+# Eclipse
+Add 'Help -> Install New Software' install the following plugins
+  'General Purpose Tools -> Remove System Explorer End-User Runtime'
+  'Mobile and Device Development -> C/C++ Remote Launch'
+
+Update the compiler and assembler settings for the project with,
+  arm-linux-gnueabihf-gcc-4.8
+  arm-linux-gnueabihf-g++-4.8
+  arm-linux-gnueabihf-as
+  
+When running remotely, add a new connection, settings are:
+ Type = Linux
+ Connnection = 192.168.7.2
+ Files = ssh.files
+ Processes = processes.shell.linux
+ Shells = ssh.shells
+ SSH Terminals = ssh.terminals
+ 
+  
+  
