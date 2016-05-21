@@ -18,12 +18,12 @@ Update the compiler and assembler settings for the project with,
   arm-linux-gnueabihf-as
   
 When running remotely, add a new connection, settings are:
- Type = Linux
- Connnection = 192.168.7.2
- Files = ssh.files
- Processes = processes.shell.linux
- Shells = ssh.shells
- SSH Terminals = ssh.terminals
+  Type = Linux
+  Connnection = 192.168.7.2
+  Files = ssh.files
+  Processes = processes.shell.linux
+  Shells = ssh.shells
+  SSH Terminals = ssh.terminals
  
   
   
