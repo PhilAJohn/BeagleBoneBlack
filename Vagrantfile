@@ -68,6 +68,7 @@ Vagrant.configure(2) do |config|
    sudo apt-get install -y eclipse eclipse-cdt g++ gcc
    sudo apt-get install -y gcc-arm-linux-gnueabihf
    sudo apt-get install -y g++-arm-linux-gnueabihf
+   sudo apt-get install -y git
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
    SHELL
