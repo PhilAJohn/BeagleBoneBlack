@@ -64,11 +64,15 @@ Vagrant.configure(2) do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-   config.vm.provision "shell", inline: <<-SHELL
+   config.vm.provision "shell", privileged: false, inline: <<-SHELL
    sudo apt-get install -y eclipse eclipse-cdt g++ gcc
    sudo apt-get install -y gcc-arm-linux-gnueabihf
    sudo apt-get install -y g++-arm-linux-gnueabihf
    sudo apt-get install -y git
+   eclipse -application org.eclipse.equinox.p2.director \
+   -noSplash -repository http://download.eclipse.org/releases/indigo \
+   -installIUs org.eclipse.rse.feature.group,org.eclipse.cdt.launch.remote.feature.group
+
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
    SHELL

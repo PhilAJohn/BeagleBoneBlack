@@ -9,8 +9,12 @@ sudo apt-get install g++-arm-linux-gnueabihf
 
 # Eclipse
 Add 'Help -> Install New Software' install the following plugins
-  'General Purpose Tools -> Remove System Explorer End-User Runtime'
+  'General Purpose Tools -> Remote System Explorer End-User Runtime'
   'Mobile and Device Development -> C/C++ Remote Launch'
+OR run the command
+eclipse -application org.eclipse.equinox.p2.director \
+   -noSplash -repository http://download.eclipse.org/releases/indigo \
+   -installIUs org.eclipse.rse.feature.group,org.eclipse.cdt.launch.remote.feature.group
 
 Update the compiler and assembler settings for the project with,
   arm-linux-gnueabihf-gcc-4.8
